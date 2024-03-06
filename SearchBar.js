@@ -15,12 +15,8 @@ function crearBarraDeBusquedaConAutocompletar(etiqueta, items, itemElegido) {
   if (!barraDeBusqueda) return;
   // Por si no existe el contenedor padre
 
-  const input = document.createElement("input");
+  const input = document.getElementById("inputBarraBusqueda");
   // Creo un input
-  input.type = "text";
-  // Lo hago de tipo text
-  barraDeBusqueda.appendChild(input);
-  // Lo agrego al contenedor padre
 
   const sugerenciasPanel = document.createElement("div");
   // Creo un nuevo div
@@ -76,7 +72,7 @@ function crearBarraDeBusquedaConAutocompletar(etiqueta, items, itemElegido) {
 // Ejemplo de invocación
 document.addEventListener("DOMContentLoaded", function () {
   crearBarraDeBusquedaConAutocompletar(
-    "#search-container",
+    "#contenedorBusqueda",
     arrayProductos,
     function (resultado) {
       console.log("Ítem seleccionado:", resultado);
